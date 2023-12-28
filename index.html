@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.webp" type="image/x-icon">
+    <title>QR Hub - QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logo.webp" alt="logo" height="80px">
+            <h1>- QR Code Generator</h1>
+        </div>
+        <hr>
+        <div class="main">
+            <h2>Enter the Text or Link you want to convert to QR Code</h2>
+            <input type="text" placeholder="Enter Text or URL" id="qrText">
+
+            <div id="imgBox">
+                <img src="" id="qrImage">
+            </div>
+
+            <button onclick="generateQR()">Generate QR</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
