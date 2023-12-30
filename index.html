@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="rgb(30, 30, 30)">
     <link rel="shortcut icon" href="logo.webp" type="image/x-icon">
+    <meta name="description" content="QR-Hub is a qr code generator. Just enter a Text or Link you want to convert to QR and this website will do the work for you">
     <title>QR Hub - QR Code Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -17,15 +20,22 @@
         <div class="main">
             <h2>Enter the Text or Link you want to convert to QR Code</h2>
             <input type="text" placeholder="Enter Text or URL" id="qrText">
-
-            <div id="imgBox">
-                <img src="" id="qrImage">
+            <div id="qr">
+                <img src="" id="qrImage" alt="">
             </div>
-
             <button onclick="generateQR()">Generate QR</button>
+        </div>
+        <div class="footer">
+            Made with <span>&#10084;</span>, by <a href="https://linkedin.com/in/mohit-shaharwale-634b22282" target="_blank">Mohit Shaharwale</a>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        function generateQR(){
+            if(qrText.value.length > 0){
+                qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + qrText.value;
+            }   
+        }
+    </script>
 </body>
 </html>
